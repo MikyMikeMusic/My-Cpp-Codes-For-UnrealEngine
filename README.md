@@ -14,6 +14,8 @@ It also maintains a number of state variables, such as the index of the current 
 - SoundLocalization: In this code I tried to simulate the localization of the sound, without using the settings of the Unreal Engine Attenuation audio engine and without the use of any Middleware. 
 I simply created a component class that instantiates two AudioComponents, called LeftEar and RighEar, then calculated the attenuation based on the distance between the actor who owns the component and the camera manager, and finally simulated the Panning effect with Metasound,
 Calculating the angle of rotation of the camera and using that value to set the Float parameter associated with the Metasound that reproduces the sound.
+- SoundManager: This project implements a sound management system (simulating the MaxHeap tree data structure) for Unreal Engine. The system manages a series of sound effects, each with an associated priority, and can play the sound effect with the highest priority or all sound effects in order of priority. 
+The system uses a pool of nodes to optimize memory allocation.
 
 
 Feel free to explore and use these codes for your portfolio or personal projects!
