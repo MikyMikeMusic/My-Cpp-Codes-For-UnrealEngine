@@ -16,6 +16,7 @@ I simply created a component class that instantiates two AudioComponents, called
 Calculating the angle of rotation of the camera and using that value to set the Float parameter associated with the Metasound that reproduces the sound.
 - SoundManager: This project implements a sound management system (simulating the MaxHeap tree data structure) for Unreal Engine. The system manages a series of sound effects, each with an associated priority, and can play the sound effect with the highest priority or all sound effects in order of priority. 
 The system uses a pool of nodes to optimize memory allocation.
+- MyModule : A brief example of using OOP principles, such as composition, aggregation, interfaces, decoupling, and modularity. Just referring to the latter I exported folder with the created module with all its dependencies on other modules.
 
 
 Feel free to explore and use these codes for your portfolio or personal projects!
