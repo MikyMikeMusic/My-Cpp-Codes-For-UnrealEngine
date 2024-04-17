@@ -6,17 +6,20 @@
 #include "GameFramework/Actor.h"
 #include "Dijkstra.generated.h"
 
+//Struct for the node of the graph
 USTRUCT()
 struct FDijkstraNode
 {
 	GENERATED_BODY()
 
 public:
+	//Attributes
 	FVector Position;
 	TMap<int32, float> Neighbors;
 
 	FDijkstraNode() {}
 
+	//Mapping the position of the node
 	FDijkstraNode(FVector Position) : Position(Position) {}
 };
 
@@ -28,6 +31,7 @@ class UDijkstra : public UAudioComponent
 public:
 	UDijkstra();
 
+	//Attributes
 	int ChooseTheNumberOfNode;
 	int32 startNodeIndex;
 
@@ -37,11 +41,13 @@ private:
 	int32 currentNodeIndex;
 	float speed;
 
+	//Methods
 protected:
 	virtual void BeginPlay() override;
 
 public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	//Setters
 	UFUNCTION(BlueprintCallable, Category = "Dijkstra")
 	FORCEINLINE void SetChooseTheNumberOfNode(int numberOfNode) { ChooseTheNumberOfNode = numberOfNode; }
 
