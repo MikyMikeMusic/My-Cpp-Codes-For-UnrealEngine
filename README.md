@@ -18,7 +18,7 @@ Calculating the angle of rotation of the camera and using that value to set the 
 The system uses a pool of nodes to optimize memory allocation.
 - MyModule : A brief example of using OOP principles, such as composition, aggregation, interfaces, decoupling, and modularity. Just referring to the latter I exported folder with the created module with all its dependencies on other modules.
 - SoundSource with Graph Dfs : The class has methods to initialize and position sound sources, perform a depth-first search (DFS), play a sound, and print the position of a sound source. Sound sources are created for each sound provided, positioned at random locations within a defined range, and connected to each other. The depth-first search is performed starting from a specified sound source, playing the sound and printing the position of each visited sound source.
-
+- DijkstraAudio : The `UDijkstra` class appears to be an Unreal Engine 5 component that implements the Dijkstra algorithm for moving an actor along a path defined by nodes. This code is not complete and is currently a prototype. The aim of this prototype is to "spatialize" a moving AudioComponent in 3D space.
 
 Feel free to explore and use these codes for your portfolio or personal projects!
 
