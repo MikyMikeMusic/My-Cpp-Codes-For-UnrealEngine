@@ -21,6 +21,7 @@ The system uses a pool of nodes to optimize memory allocation.
 - DijkstraAudio : The `UDijkstra` class appears to be an Unreal Engine 5 component that implements the Dijkstra algorithm for moving an actor along a path defined by nodes. This code is not complete and is currently a prototype. The aim of this prototype is to "spatialize" a moving AudioComponent in 3D space.
 - AudioDeviceForTest: This class represents an "abstract audio device" used for testing purposes. The `AudioDeviceForTest` class is initialized with various parameters that describe the characteristics of the audio that will be handled, such as the sample rate, the number of channels, the number of frames per callback, a callback function, and an opaque pointer to user data (the "cookie"). The callback function is called whenever the audio device needs more data. In this example, the callback function simply fills the buffer with zeros. This class can be used to simulate an audio device for testing and debugging your audio code.
 - Buffer: These buffering techniques are crucial for ensuring smooth and uninterrupted audio playback in many audio programming applications.
+- Audio Engine Multithreaded Simulation : The `AudioEngineMultithreadSimulation` class is designed to simulate a multithreaded audio engine in Unreal Engine. It uses a message queue to handle play and stop requests for sounds, and uses a `TAtomic` object to keep track of the number of messages in the queue.
 
 Feel free to explore and use these codes for your portfolio or personal projects!
 

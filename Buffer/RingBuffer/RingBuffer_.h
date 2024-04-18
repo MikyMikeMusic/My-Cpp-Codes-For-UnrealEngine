@@ -10,7 +10,7 @@ public:
 	RingBuffer_(int32 Samples, int32 Frames)
 		: Samples(Samples), MaxFrames(Frames), ReadIndex(0), WriteIndex(0), NumFrames(Frames)
 	{
-		Buffer.setNum(Samples * MaxFrames);
+		Buffer.SetNum(Samples * Frames);
 	}
 
 	bool CanWrite() { return NumFrames != MaxFrames; }
