@@ -1,0 +1,5 @@
+# Buffering Techniques
+
+- Double Buffering: This technique uses two buffers, one for reading and one for writing. While one buffer is being used for audio playback, the other is being filled with the next audio data. When the playback buffer is exhausted, the roles of the two buffers are swapped. This allows for continuous and uninterrupted audio playback.
+- Triple Buffering: This technique extends double buffering by adding a third buffer. This allows the system to start filling the next buffer even if the current playback buffer has not been fully read yet. This can help reduce latency and prevent audio interruptions if the buffer filling operation is delayed for some reason.
+- Ring Buffering: This technique uses a circular buffer that can hold an arbitrary number of audio frames. When the buffer is full, writing starts again from the beginning of the buffer, overwriting the oldest data. This allows for handling a longer delay between the generation of audio data and their playback, i.e., latency. Moreover, the ring buffer is particularly useful when the rate of data production and consumption is not constant.

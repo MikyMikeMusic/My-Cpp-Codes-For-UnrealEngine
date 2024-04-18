@@ -8,19 +8,21 @@ class AudioDeviceForTest
 {
 public:
 
-	typedef void(*AudioCallback)(float*, int, int, void*);
+    typedef void(*AudioCallback)(float*, int, int, void*);
 
-	AudioDeviceForTest(int SampleRate, int Channels, int Frames, AudioCallback, void* Cookie);
-	~AudioDeviceForTest();
+    AudioDeviceForTest(int SampleRate, int Channels, int Frames, AudioCallback, void* InCookie);
+    ~AudioDeviceForTest();
 
 private:
-	int SampleRate;
-	int Channels;
-	int Frames;
-	AudioCallback Callback;
-	void* Cookie;
-
+    int SampleRate;
+    int Channels;
+    int Frames;
+    AudioCallback Callback;
+    void* Cookie;
 
 protected:
-	void MyAudioCallback(float* InBuffer, int NumFrames, int NumChannels, void* Cookie);
+    void MyAudioCallback(float* InBuffer, int NumFrames, int NumChannels, void* InCookie);
 };
+
+
+
