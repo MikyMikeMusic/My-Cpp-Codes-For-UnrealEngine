@@ -20,11 +20,11 @@ class AudioEngineMultithreadSimulation
 private:
 	TQueue<Message> messageQueue;
 	TAtomic<int32> FrameMessages;
-	bool Stop;
+	bool bStop;
 
 public:
 	AudioEngineMultithreadSimulation()
-		: Stop(false) {}
+		: bStop(false) {}
 
 	FORCEINLINE void Play(int SoundID)
 	{
@@ -34,23 +34,23 @@ public:
 		messageQueue.Enqueue(msg);
 	}
 
-	FORCEINLINE void Stop(int SoundID)
+	FORCEINLINE void Stop(int InSoundID)
 	{
 		Message msg;
 		msg.type = MessageType::Stop;
-		msg.id = SoundID;
+		msg.id = InSoundID;
 		messageQueue.Enqueue(msg);
 	}
 
 	FORCEINLINE void Update()
 	{
-		FrameMessages.Increment();
+		FrameMessages.IncrementExchange();
 	}
 
 	void ProcessMessages();
 
 	FORCEINLINE void StopEngine()
 	{
-		Stop = true;
+		bStop = true;
 	}
 };

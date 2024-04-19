@@ -5,7 +5,7 @@
 
 void AudioEngineMultithreadSimulation::ProcessMessages()
 {
-	while (!Stop)
+	while (!bStop)
 	{
 		if (FrameMessages.Load() == 0)
 		{
