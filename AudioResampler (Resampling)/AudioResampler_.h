@@ -12,7 +12,11 @@ public:
 	AudioResampler_();
 	~AudioResampler_();
 
-	static FORCEINLINE float Lerp(float from, float to, float t)
+	void Resample(TArray<float>& input, TArray<float>& output, int inputFreq, int outputFreq);
+
+private:
+
+	FORCEINLINE float Lerp(float from, float to, float t)
 	{
 		return (1.0f - t) * from + t * to;
 	}
@@ -39,6 +43,6 @@ public:
 
 	void Downsample(TArray<float>& input, TArray<float>& output, int inputFreq, int outputFreq);
 
-	void Resample(TArray<float>& input, TArray<float>& output, int inputFreq, int outputFreq);
+
 
 };
